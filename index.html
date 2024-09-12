@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata cantika</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Biodata cantika</h1>
+    </header>
+
+    <main>
+        <section class="profile">
+            <img src="profile.jpg" alt="Foto Profil" class="profile-img">
+            <h2 id="name">cantika sari putri </h2>
+            <p id="job">Pelajar</p>
+        </section>
+
+        <section class="info">
+            <h3>Informasi lebih lanjut</h3>
+            <ul>
+                <li>Email: <span id="email">cantikasariputri59@gmail.com</span></li>
+                <li>Telepon: <span id="phone">087830190330</span></li>
+                <li>Alamat: <span id="address">jalan raya samarang,garut</span></li>
+            </ul>
+        </section>
+
+        <section class="details">
+            <h3>Detail Lainnya</h3>
+            <button id="showDetailsButton">saya anak kedua</button>
+            <div id="details" class="hidden">
+                <p>saya anak kedua dari 2 bersaudara,dari ibu,dan bapak</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; by cantika</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const showDetailsButton = document.getElementById('showDetailsButton');
+    const detailsDiv = document.getElementById('details');
+    
+    showDetailsButton.addEventListener('click', () => {
+        if (detailsDiv.classList.contains('hidden')) {
+            detailsDiv.classList.remove('hidden');
+            showDetailsButton.textContent = 'Sembunyikan Detail';
+        } else {
+            detailsDiv.classList.add('hidden');
+            showDetailsButton.textContent = 'Tampilkan Detail';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
